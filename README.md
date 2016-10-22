@@ -1,16 +1,16 @@
 # findurl
-findurl, find and export URLs in IRC logs.
+**findurl**, find and export URLs in IRC logs.
 
 ## Install:
-'''bash
+```bash
 $ git clone https://github.com/mofm/findurl.git
-'''
+```
 
 ## Usage:
-'''bash
+```bash
 $ python findurl.py $(irc_log_file)
-'''
+```
 ### Example:
-'''bash
+```bash
 $ python findurl.py \#pyistanbul
-'''
+```
