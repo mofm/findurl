@@ -3,13 +3,15 @@
 
 import sys
 import re
+import urlmarker
 
+rapor = open((sys.argv[1] + '_urls'), "w")
 with open(sys.argv[1], 'r') as f:
-    rapor = open("rapor.txt", "w")
     for line in f.readlines():
-        match = re.search("(?P<url>https?://[^\s]+)", line)
+        match = re.search(urlmarker.WEB_URL_REGEX, line)
         if match is not None:
-            i = match.group("url")
+            i = match.group()
             rapor.write(i + "\n")
 
+f.close()
 rapor.close()
